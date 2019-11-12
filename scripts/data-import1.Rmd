@@ -1,0 +1,6 @@
+---
+title: "data-import1"
+output: html_document
+---
+
+read.c
