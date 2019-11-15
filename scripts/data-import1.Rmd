@@ -14,13 +14,15 @@ library(ggplot2)
 ```
 
 
-```{r}
 
+```{r}
+Water_area_freq <- count(SharkAttackdata, 'water_area')
 ```
 
 
 ```{r}
-Water_area_freq <- count(SharkAttackdata, 'water_area')
+ggplot(Water_area_freq,aes(x=water_area)) +
+  geom_histogram()
 ```
 
 
