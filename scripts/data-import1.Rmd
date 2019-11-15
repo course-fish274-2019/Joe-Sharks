@@ -3,4 +3,24 @@ title: "data-import1"
 output: html_document
 ---
 
-read.c
+```{r}
+SharkAttackdata <- read.csv("../data/SharkAttackdata.csv")
+```
+
+
+```{r}
+library(dplyr)
+library(ggplot2)
+```
+
+
+```{r}
+
+```
+
+
+```{r}
+Water_area_freq <- count(SharkAttackdata, 'water_area')
+```
+
+
