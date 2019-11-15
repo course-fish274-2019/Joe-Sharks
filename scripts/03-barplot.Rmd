@@ -24,7 +24,8 @@ ggplot(SharkAttackdata, aes(continent)) +
 ```
 ```{r}
 ggplot(SharkAttackdata, aes(water_area)) +
-  geom_bar()
+  geom_bar() + 
+  theme(axis.text.x = element_text(angle = 90))
 
 
 ```
