@@ -1,12 +1,15 @@
 ---
 title: "data-import1"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 ```{r}
 SharkAttackdata <- read.csv("../data/SharkAttackdata.csv")
 ```
 
+## Packages
 
 ```{r}
 library(dplyr)
@@ -14,23 +17,23 @@ library(ggplot2)
 ```
 
 
+## New Data Tables Measuring Frequency
 
 ```{r}
 Water_area_freq <- count(SharkAttackdata, 'water_area')
 ```
 
-
-```{r}
-ggplot(Water_area_freq,aes(x=freq)) +
-  geom_histogram()
-```
 ```{r}
 Continent_freq <- count(SharkAttackdata, 'continent')
 ```
 
+## Bargraph with Continent and Frequency
 
 ```{r}
 ggplot(SharkAttackdata, aes(continent)) +
-  geom_bar()
+  geom_bar() +
+   theme(legend.position = "bottom") +
+    theme(legend.direction = "vertical") +
+    theme(axis.text.x = element_text(angle = -90))
 ```
 
