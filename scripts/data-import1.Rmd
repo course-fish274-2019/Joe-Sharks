@@ -37,3 +37,12 @@ ggplot(SharkAttackdata, aes(continent)) +
     theme(axis.text.x = element_text(angle = -90))
 ```
 
+## Bargraph with Water Area and Frequency
+
+```{r}
+ggplot(SharkAttackdata, aes(water_area)) +
+  geom_bar() + 
+  theme(axis.text.x = element_text(angle = 90))
+
+```
+
