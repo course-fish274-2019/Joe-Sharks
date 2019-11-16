@@ -29,3 +29,8 @@ Continent_freq <- count(SharkAttackdata, 'continent')
 ```
 
 
+```{r}
+ggplot(SharkAttackdata, aes(continent)) +
+  geom_bar()
+```
+
