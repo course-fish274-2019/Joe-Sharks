@@ -19,7 +19,8 @@ SharkAttackdata <- read.csv("../data/SharkAttackdata.csv")
 ```{r}
 ggplot(SharkAttackdata, aes(continent)) +
   geom_bar() + 
-  theme(axis.text.x = element_text(angle = 90))
+  theme(axis.text.x = element_text(angle = 90)) +
+  facet_wrap(~year)
 
 ```
 ```{r}
