@@ -13,3 +13,8 @@ data/SharkAttackdata.csv -- the data I downloaded from online on shark attacks
 outputs/data-import1.htm -- the html of my project knitted
 
 classs-exercises/tidyr -- inclass exercises practicing tidyr with gathering/organizing data frames
+
+
+
+
+.gitignore -- 
