@@ -2,7 +2,7 @@
 
 Project purpose: The purpose of this project is to manipulate data using dplyr and create graphs with ggplot2 for our "mini-project" assignment
 
-Packages used:Dplyr, ggplot2 
+Packages used: Dplyr, ggplot2 
 
 Files in order of use:
 
@@ -14,6 +14,6 @@ outputs/data-import1.htm -- the html of my project knitted
 
 classs-exercises/tidyr -- inclass exercises practicing tidyr with gathering/organizing data frames
 
-Joe-Sharks.Rproj -- 
+Joe-Sharks.Rproj -- metadata about this project
 
-.gitignore -- 
+.gitignore -- files that aren't getting pushed, not important
