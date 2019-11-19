@@ -5,20 +5,21 @@ output:
   pdf_document: default
 ---
 
+## Inserting Data
+Inserted data using read.csv of my shark attack data 
 ```{r}
 SharkAttackdata <- read.csv("../data/SharkAttackdata.csv")
 ```
 
 ## Packages
-
+I loaded the dplyr and ggplot2 packages. The dyplyr package helps to manipulate data whereas the ggplot2 helps to graph it and show it visually. 
 ```{r}
 library(dplyr)
 library(ggplot2)
 ```
 
-
 ## New Data Tables Measuring Frequency
-
+I created two new data tables in terms of their frequency for the collective 1960-2015 time frame. The first, is the water_area_frequency in which each water area frequency is counted for the collective time frame. The second, is the continent_freq table which each continent (or land mass) is counted for the collective time frame. 
 ```{r}
 Water_area_freq <- count(SharkAttackdata, 'water_area')
 ```
@@ -28,7 +29,7 @@ Continent_freq <- count(SharkAttackdata, 'continent')
 ```
 
 ## Bargraph with Continent and Frequency
-
+I created a bar graph that gave the frequency of collective shark attacks between the years 1960 and 2015, by continent/land mass area. 
 ```{r}
 ggplot(SharkAttackdata, aes(continent)) +
   geom_bar() +
@@ -40,6 +41,7 @@ ggplot(SharkAttackdata, aes(continent)) +
 
 
 ## Bargraph with Water Area and Frequency
+I created a bar graph that gave the frequency of collective shark attacks between the years 1960 and 2015, by water area. 
 
 ```{r}
 ggplot(SharkAttackdata, aes(water_area)) +
@@ -47,4 +49,6 @@ ggplot(SharkAttackdata, aes(water_area)) +
   theme(axis.text.x = element_text(angle = 90))
 
 ```
+
+
 
