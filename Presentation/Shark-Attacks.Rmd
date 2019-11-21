@@ -12,8 +12,15 @@ output: ioslides_presentation
 - between the years of 1960 - 2015
 - 2257 observations
 
-## Slide with R Output
 
+## Imorting data
+
+```{r}
+SharkAttackdata <- read.csv("../data/SharkAttackdata.csv")
+```
+
+
+## Slide with R Output
 
 ```{r}
 knitr::kable(
