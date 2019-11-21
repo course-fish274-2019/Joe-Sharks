@@ -7,30 +7,37 @@ output: ioslides_presentation
 ---
 
 ## My Shark Attack Data
-
 - shark attack data around the world
 - between the years of 1960 - 2015
 - 2257 observations
 
+```{r, include = FALSE}
 
-## Imorting data
-
-```{r}
 SharkAttackdata <- read.csv("../data/SharkAttackdata.csv")
+
 ```
 
 
-## Slide with R Output
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE
+)
+```
 
+## Shark Attack Data
 ```{r}
+
 knitr::kable(
   SharkAttackdata [1:5, ], 
   caption = "A knitr kable.")
+
 ```
 
 ## Slide with Plot
 
-```{r pressure}
-plot(pressure)
+![word-describe]
+
+```{r}
+
 ```
 
