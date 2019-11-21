@@ -11,6 +11,9 @@ output: ioslides_presentation
 - between the years of 1960 - 2015
 - 2257 observations
 
+
+![shark](https://s.hdnux.com/photos/01/00/57/20/16970768/7/gallery_medium.jpg)
+
 ```{r, include = FALSE}
 
 SharkAttackdata <- read.csv("../data/SharkAttackdata.csv")
@@ -33,11 +36,16 @@ knitr::kable(
 
 ```
 
-## Slide with Plot
-
-![word-describe]
-
+## Barplot with Continent and Frequency
 ```{r}
-
+library(ggplot2)
+ggplot(SharkAttackdata, aes(continent)) +
+  geom_bar() +
+   theme(legend.position = "bottom") +
+    theme(legend.direction = "vertical") +
+    theme(axis.text.x = element_text(angle = -90))
 ```
+
+## Thank you!
+![](https://media1.giphy.com/media/107gPMgIBBleA8/giphy.gif)
 
