@@ -6,7 +6,7 @@ Packages used: Dplyr, ggplot2
 
 Files in order of use:
 
-presentations/Shark-Attacks.Rmd -- 
+presentations/Shark-Attacks.Rmd -- week 9 presenation for quiz (5 slides, 1 image, 1 gif, 1 bar plot)
 
 scripts/dataimport1.Rmd -- The .Rmd of my project so far with the code and one barplot
 
