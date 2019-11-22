@@ -6,6 +6,8 @@ Packages used: Dplyr, ggplot2
 
 Files in order of use:
 
+presentations/Shark-Attacks.Rmd -- 
+
 scripts/dataimport1.Rmd -- The .Rmd of my project so far with the code and one barplot
 
 data/SharkAttackdata.csv -- the data I downloaded from online on shark attacks 
