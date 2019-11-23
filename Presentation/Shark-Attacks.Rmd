@@ -15,6 +15,7 @@ output: ioslides_presentation
 ![shark](https://s.hdnux.com/photos/01/00/57/20/16970768/7/gallery_medium.jpg)
 
 ```{r, include = FALSE}
+# I inserted my shark attack data by using read.csv and used the include = FALSE function so it would not show up on my slides after I knit it 
 
 SharkAttackdata <- read.csv("../data/SharkAttackdata.csv")
 
@@ -22,6 +23,7 @@ SharkAttackdata <- read.csv("../data/SharkAttackdata.csv")
 
 
 ```{r, include = FALSE}
+# I used echo = FALSE so that the code would not show up when I did not want it to and include = FALSE so that it would not show up this time 
 knitr::opts_chunk$set(
   echo = FALSE
 )
@@ -29,7 +31,7 @@ knitr::opts_chunk$set(
 
 ## Shark Attack Data
 ```{r}
-
+# i used knitr kable function to show the first five values of my shark attack data table in a more aestetically pleasing way
 knitr::kable(
   SharkAttackdata [1:5, ], 
   caption = "A knitr kable.")
@@ -38,6 +40,7 @@ knitr::kable(
 
 ## Barplot with Continent and Frequency
 ```{r}
+# I loaded ggplot and then inserted the bar graph i made last week 
 library(ggplot2)
 ggplot(SharkAttackdata, aes(continent)) +
   geom_bar() +
