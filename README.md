@@ -1,6 +1,11 @@
 # Joe-Sharks
+General Idea for Project:
 
-Project purpose: The purpose of this project is to manipulate data using dplyr and create graphs with ggplot2 for our "mini-project" assignment
+In this project I plan to explore the question of: Do shark attacks increase over time? I am using the data I have about shark attacks from 1960-2015.
+
+I will hopefully be able to group the general geographical location within each year and see if there is a trend
+
+Project Purpose: To create a final project for fish 274 course. More specifically, I hope to look at certain variables within a shark attack data set.
 
 Packages used: Dplyr, ggplot2 
 
