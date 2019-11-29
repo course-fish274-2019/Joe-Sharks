@@ -1,7 +1,7 @@
 # Joe-Sharks
 General Idea for Project:
 
-In this project I plan to explore the question of: Do shark attacks increase over time? I am using the data I have about shark attacks from 1960-2015.
+In this project I plan to explore the question of: Do shark attacks increase over time (hope to answer this in the coming weeks) ? Where do shark attack occur most frequently (already answered this) I am using the data I have about shark attacks from 1960-2015.
 
 I will hopefully be able to group the general geographical location within each year and see if there is a trend
 
