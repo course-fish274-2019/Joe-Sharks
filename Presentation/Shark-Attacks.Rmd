@@ -49,6 +49,19 @@ ggplot(SharkAttackdata, aes(continent)) +
     theme(axis.text.x = element_text(angle = -90))
 ```
 
+## Barplot with Year and Frequency
+```{r}
+# I used ggplot to create a frequency barplot and got help from the grad students to make the appropriate ticks in the axis that were consistant 
+ggplot(SharkAttackdata, aes(year)) +
+  geom_bar() + 
+   theme(legend.position = "bottom") +
+    theme(legend.direction = "vertical") +
+    theme(axis.text.x = element_text(angle = 90))+
+  scale_x_continuous( breaks=pretty(SharkAttackdata$year))
+```
+
+
+
 ## Thank you!
 ![](https://media1.giphy.com/media/107gPMgIBBleA8/giphy.gif)
 
