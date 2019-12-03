@@ -51,4 +51,15 @@ ggplot(SharkAttackdata, aes(water_area)) +
 ```
 
 
+```{r}
+ggplot(SharkAttackdata, aes(year)) +
+  geom_bar() + 
+   theme(legend.position = "bottom") +
+    theme(legend.direction = "vertical") +
+    theme(axis.text.x = element_text(angle = 90))+
+  scale_x_continuous( breaks=pretty(SharkAttackdata$year))
+```
+
+
+
 
