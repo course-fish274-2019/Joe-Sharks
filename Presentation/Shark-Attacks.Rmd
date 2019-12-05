@@ -2,8 +2,9 @@
 title: "Shark Attacks"
 author: "Joelle Pollastro"
 date: "11/19/2019"
-output: ioslides_presentation
-
+output:
+  slidy_presentation:
+    theme: cerulean
 ---
 
 ## My Shark Attack Data
@@ -59,6 +60,7 @@ ggplot(SharkAttackdata, aes(year)) +
     theme(axis.text.x = element_text(angle = 90))+
   scale_x_continuous( breaks=pretty(SharkAttackdata$year))
 ```
+
 
 
 

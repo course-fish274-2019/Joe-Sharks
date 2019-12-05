@@ -1,8 +1,9 @@
 ---
 title: "data-import1"
-output:
-  html_document: default
-  pdf_document: default
+output: 
+    slidy_presentation:
+    theme: minty
+  
 ---
 
 ## Inserting Data
@@ -16,6 +17,8 @@ I loaded the dplyr and ggplot2 packages. The dyplyr package helps to manipulate 
 ```{r}
 library(dplyr)
 library(ggplot2)
+library(prettydoc)
+
 ```
 
 ## New Data Tables Measuring Frequency
@@ -61,5 +64,28 @@ ggplot(SharkAttackdata, aes(year)) +
 ```
 
 
+```{r}
+USdata <- filter(SharkAttackdata, country == "USA")
+
+
+ggplot(USdata, aes(state)) +
+  geom_bar() + 
+   theme(legend.position = "bottom") +
+    theme(legend.direction = "vertical") +
+    theme(axis.text.x = element_text(angle = 90))
+```
+
+
+```{r}
+
+Floridaadata <- filter(USdata, state == "Florida")
+
+ggplot(Floridaadata, aes(county)) +
+  geom_bar() + 
+   theme(legend.position = "bottom") +
+    theme(legend.direction = "vertical") +
+    theme(axis.text.x = element_text(angle = 90))
+
+```
 
 
