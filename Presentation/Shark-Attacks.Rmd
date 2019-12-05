@@ -2,12 +2,13 @@
 title: "Shark Attacks"
 author: "Joelle Pollastro"
 date: "11/19/2019"
-output:
-  slidy_presentation:
-    theme: cerulean
+output: slidy_presentation
+theme: cerulean
+
 ---
 
 ## My Shark Attack Data
+
 - shark attack data around the world
 - between the years of 1960 - 2015
 - 2257 observations
@@ -99,8 +100,6 @@ ggplot(Floridaadata, aes(county)) +
 ## Don't go to Volusia County and go swimming with the sharkies !
 
 ![](http://www.floridacountiesmap.com/aalocs/volusia.gif) ![](http://www.volusia.com/wp-content/uploads/2015/07/IMG_3700-e1463948422381.jpg){width=40%}
-
-
 
 
 
