@@ -61,7 +61,30 @@ ggplot(SharkAttackdata, aes(year)) +
   scale_x_continuous( breaks=pretty(SharkAttackdata$year))
 ```
 
+## Barplot of Shark Attacks in the USA filtered by state 
+```{r}
+USdata <- filter(SharkAttackdata, country == "USA")
 
+
+ggplot(USdata, aes(state)) +
+  geom_bar() + 
+   theme(legend.position = "bottom") +
+    theme(legend.direction = "vertical") +
+    theme(axis.text.x = element_text(angle = 90))
+```
+
+## Barplot of Shark Attacks in Florida filtered by county 
+### Don't go to Volusia County and go swimming with the sharkies !
+```{r}
+Floridaadata <- filter(USdata, state == "Florida")
+
+ggplot(Floridaadata, aes(county)) +
+  geom_bar() + 
+   theme(legend.position = "bottom") +
+    theme(legend.direction = "vertical") +
+    theme(axis.text.x = element_text(angle = 90))
+
+```
 
 
 ## Thank you!
