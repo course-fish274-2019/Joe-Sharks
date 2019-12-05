@@ -12,8 +12,15 @@ output:
 - between the years of 1960 - 2015
 - 2257 observations
 
+```{r, include = FALSE}
+#loading packages to use!
 
-![shark](https://s.hdnux.com/photos/01/00/57/20/16970768/7/gallery_medium.jpg)
+library(dplyr)
+library(ggplot2)
+```
+
+
+![](https://s.hdnux.com/photos/01/00/57/20/16970768/7/gallery_medium.jpg)
 
 ```{r, include = FALSE}
 # I inserted my shark attack data by using read.csv and used the include = FALSE function so it would not show up on my slides after I knit it 
@@ -74,7 +81,6 @@ ggplot(USdata, aes(state)) +
 ```
 
 ## Barplot of Shark Attacks in Florida filtered by county 
-### Don't go to Volusia County and go swimming with the sharkies !
 ```{r}
 Floridaadata <- filter(USdata, state == "Florida")
 
@@ -84,9 +90,20 @@ ggplot(Floridaadata, aes(county)) +
     theme(legend.direction = "vertical") +
     theme(axis.text.x = element_text(angle = 90))
 
+
+
 ```
 
 
+
+## Don't go to Volusia County and go swimming with the sharkies !
+
+![](http://www.floridacountiesmap.com/aalocs/volusia.gif) ![](http://www.volusia.com/wp-content/uploads/2015/07/IMG_3700-e1463948422381.jpg){width=40%}
+
+
+
+
+
 ## Thank you!
-![](https://media1.giphy.com/media/107gPMgIBBleA8/giphy.gif)
+![](https://media1.giphy.com/media/107gPMgIBBleA8/giphy.gif){width=100%}
 
