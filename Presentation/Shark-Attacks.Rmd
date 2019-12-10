@@ -5,6 +5,7 @@ date: "11/19/2019"
 output: slidy_presentation
 theme: cerulean
 
+
 ---
 
 ## My Shark Attack Data
@@ -14,10 +15,17 @@ theme: cerulean
 - 2257 observations
 
 ```{r, include = FALSE}
-#loading packages to use!
+
+
+#loading packages to use
 
 library(dplyr)
 library(ggplot2)
+
+
+
+
+
 ```
 
 
@@ -71,8 +79,9 @@ ggplot(SharkAttackdata, aes(year)) +
 
 ## Barplot of Shark Attacks in the USA filtered by state 
 ```{r}
-USdata <- filter(SharkAttackdata, country == "USA")
+# filtering data by country (USA) and then making a bar plot organized by state
 
+USdata <- filter(SharkAttackdata, country == "USA")
 
 ggplot(USdata, aes(state)) +
   geom_bar() + 
@@ -83,7 +92,10 @@ ggplot(USdata, aes(state)) +
 
 ## Barplot of Shark Attacks in Florida filtered by county 
 ```{r}
+
+#taking the data I just filtered and filtering it again to just get the florida data organized by county
 Floridaadata <- filter(USdata, state == "Florida")
+
 
 ggplot(Floridaadata, aes(county)) +
   geom_bar() + 
