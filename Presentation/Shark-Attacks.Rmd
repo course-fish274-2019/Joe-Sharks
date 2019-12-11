@@ -23,9 +23,6 @@ library(dplyr)
 library(ggplot2)
 
 
-
-
-
 ```
 
 
@@ -47,50 +44,66 @@ knitr::opts_chunk$set(
 ```
 
 ## Shark Attack Data
+- the data included the water area, continent, country, state, and county, and year 
 ```{r}
 # i used knitr kable function to show the first five values of my shark attack data table in a more aestetically pleasing way
 knitr::kable(
   SharkAttackdata [1:5, ], 
-  caption = "A knitr kable.")
+  caption = "Shark Attack Data")
 
-```
-
-## Barplot with Continent and Frequency
-```{r}
-# I loaded ggplot and then inserted the bar graph i made last week 
-library(ggplot2)
-ggplot(SharkAttackdata, aes(continent)) +
-  geom_bar() +
-   theme(legend.position = "bottom") +
-    theme(legend.direction = "vertical") +
-    theme(axis.text.x = element_text(angle = -90))
 ```
 
 ## Barplot with Year and Frequency
+- Generally speaking, I wanted to see if shark attacks had been rising significantly 
+- From the data you can see there has been a steady increase over time of shark attacks 
 ```{r}
 # I used ggplot to create a frequency barplot and got help from the grad students to make the appropriate ticks in the axis that were consistant 
 ggplot(SharkAttackdata, aes(year)) +
-  geom_bar() + 
+  geom_bar(fill="light blue") + 
    theme(legend.position = "bottom") +
     theme(legend.direction = "vertical") +
     theme(axis.text.x = element_text(angle = 90))+
   scale_x_continuous( breaks=pretty(SharkAttackdata$year))
 ```
 
-## Barplot of Shark Attacks in the USA filtered by state 
+## Barplot with Continent and Frequency
+
+- North America had the most Shark Attacks
+- over 1200 attacks reported in this data
+- averages over 21 attacks/year since 1960
+
+```{r}
+# I inserted the bar graph i made last week
+
+ggplot(SharkAttackdata, aes(continent),color = blue) +
+  geom_bar(fill="light blue") +
+   theme(legend.position = "bottom") +
+    theme(legend.direction = "vertical") +
+    theme(axis.text.x = element_text(angle = -90))
+```
+
+
+## Barplot of Shark Attacks in the USA 
+- I decided to look at the USA for shark attacks
+- I filtered by country, and looked at the US
+- Florida had the highest shark attacks out of any state 
+
 ```{r}
 # filtering data by country (USA) and then making a bar plot organized by state
 
 USdata <- filter(SharkAttackdata, country == "USA")
 
 ggplot(USdata, aes(state)) +
-  geom_bar() + 
+  geom_bar(fill="light blue") + 
    theme(legend.position = "bottom") +
     theme(legend.direction = "vertical") +
     theme(axis.text.x = element_text(angle = 90))
 ```
 
-## Barplot of Shark Attacks in Florida filtered by county 
+## Barplot of Shark Attacks in Florida
+- I then was interested in what parts of Florida
+- I myself frequent there with my family and was genuinely curious so I filtered again by state
+- I graphed by county which is shown
 ```{r}
 
 #taking the data I just filtered and filtering it again to just get the florida data organized by county
@@ -98,7 +111,7 @@ Floridaadata <- filter(USdata, state == "Florida")
 
 
 ggplot(Floridaadata, aes(county)) +
-  geom_bar() + 
+  geom_bar(fill="light blue") + 
    theme(legend.position = "bottom") +
     theme(legend.direction = "vertical") +
     theme(axis.text.x = element_text(angle = 90))
@@ -109,7 +122,7 @@ ggplot(Floridaadata, aes(county)) +
 
 
 
-## Don't go to Volusia County and go swimming with the sharkies !
+## So ... Don't go to Volusia County, FL and go swimming with the sharkies !
 
 ![](http://www.floridacountiesmap.com/aalocs/volusia.gif) ![](http://www.volusia.com/wp-content/uploads/2015/07/IMG_3700-e1463948422381.jpg){width=40%}
 
